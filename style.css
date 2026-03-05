@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: 0;
+    color: inherit
+}
+ul, ol, li{
+    list-style: none;
+}
+:root{
+    --primarycolor:#1591EA;
+    --secundarycolor:#4682B4;
+}
+body{
+    background-color: black;
+    font-family: "Inter", sans-serif;
+}
+.hero{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 64px 120px;
+    overflow: hidden; /*oculta qualquer coisa que ultrapasse a largura ou altura*/
+}
+.hero video{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -100;
+    opacity: .2;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo img{
+    width: 250px;
+    height: auto;
+}
+nav ul{
+    display: flex;
+    gap: 48px;
+    flex-direction: row;
+}
+nav ul a{
+    color:var(--primarycolor);
+    font-size: 24px;
+    font-family: "Inter", sans-serif;
+    padding: 10px 20px; /*tamanho do botao temporario*/
+    border-radius: 4px;
+    transition: .7s;
+}
+nav ul a:hover{
+    background-color: var(--primarycolor);
+    color: black;
+    box-shadow: 0px 0px 12px 4px var(--primarycolor);
+}
+main{
+    flex-direction: column;
+    display: flex;
+    justify-content: center; /*distribui o container no centro*/
+    align-items: center;
+    gap: 140px;
+    flex-grow: 1; /*faz o item ocupar o espaço restante no container*/
+    font-family: "Kaushan Script", cursive;
+    color: white;
+}
+.texto-container p:first-child{
+    font-size: 100px;
+    font-weight: 400; /*espessura da fonte*/
+    line-height: 75%; /*aqui é o espaçamento entre as linhas*/  
+    text-shadow:  0px 0px 10px var(--primarycolor); /*text shadow deixa essa borda no texto*/
+}   
+.texto-container p:last-child{
+     font-size: 80px;
+    font-weight: 400;
+    text-shadow: 0px 0px 10px var(--primarycolor);
+
+}
+.sobre{
+    padding: 100px 120px;
+    color: white;
+    background: linear-gradient(rgba(0,0,0,0.9)),
+    url(./img/1920.webp);
+    background-size: cover;       /* faz a imagem ocupar toda a área */
+    background-position: center;  /* centraliza a imagem */
+    background-repeat: no-repeat; /* evita repetir a imagem */
+
+}
+.elemento{
+    display: flex;
+    gap: 0px;
+    align-items: center;
+}
+.sobre img{
+  width: 650px;
+  height: auto;
+  filter: drop-shadow(0px 0px 12px var(--primarycolor)); /*deixa a imagem com uma borda*/
+}
+.sobre-texto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 520px;
+    margin-left: 50px; 
+}
+.sobre-texto h1{
+    font-size: 100px;
+    font-weight: 400;
+    font-family: "Kaushan Script", cursive;
+    text-shadow: 0px 0px 12px var(--primarycolor);
+
+}
+.sobre-texto p{
+    font-size: 30px;
+    font-weight: 200;
+    font-family: "Inter", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
